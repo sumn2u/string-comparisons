@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String Comparison Between Sentences</title>
+</head>
+<body>
+    Search: <input type="text" id="search">
+    <div id="result"></div>
+    
+    <script type="text/javascript" src="trigram.js"></script>
+    <script type="text/javascript" src="levenshtein.js"></script>
+    <script type="text/javascript" src="jscosine.js"></script>
+    <script type="text/javascript" src="jaro-winker.js"></script>
+    <script type="text/javascript">
+        var input = [
+            "MARATHA"
+        ];
+        var trigram = TrigramIndex(input);
+        var searchElem = document.getElementById("search");
+        var resultElem = document.getElementById("result");
+        var Levenshtein = LevenshteinDistance('foo', 'bar');
+        var jaroWrinker = JaroWrinker('abcd', 'abc')
+        var cosine = Cosinesimilarity("Julie loves me more than Linda loves me", "Jane likes me more than Julie loves me")
+        console.log(Levenshtein, 'Levenshtein ==>')
+        console.log(cosine, "cosine similarity")
+        console.log(jaroWrinker, 'jaro wrinker')
+        searchElem.onkeyup = function () {
+            var phrase = searchElem.value;
+            var result = trigram.find(phrase.toUpperCase());
+            var resultText = "Results for " + phrase + ":<br>";
+            var currentMatch = 0;
+            var levelsPicked = 0;
+            var results = 0;
+            for (var i in result) {
+                results += 1;
+                if (result[i].matches != currentMatch) {
+                    if (results > 5 || (results > 3 && result[i].matches <= 2)) break;
+                    currentMatch = result[i].matches;
+                }
+                resultText += result[i].phrase + " " + result[i].matches + "<br>";
+            }
+            resultElem.innerHTML = resultText;
+        };
+    </script>
+</body>
+</html>
