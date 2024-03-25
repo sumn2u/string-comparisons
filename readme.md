@@ -100,10 +100,19 @@ const trigram2 = 'world';
 
 console.log('Trigram Jaccard similarity:', Trigram.similarity(trigram1, trigram2)); // Output: 0 (no shared trigrams)
 ```
+
 ## Contributing
 
 We encourage contributions to this library! Feel free to fork the repository, make your changes, and submit pull requests.
 
+## Support the Project <a name="support-the-project"></a>⭐
+
+If you feel awesome and want to support us in a small way, please consider starring and sharing the repo! This helps us get visibility and allow the community to grow. 🙏
 
 
+## Contact Us
+If you have any questions or feedback, please don't hesitate to contact us at sumn2u@gmail.com, or reach out to Suman directly. We hope you find this resource helpful 💜.
 
+
+## License Information
+This project is licensed under the  [MIT](./LICENSE) , which means that you are free to use, modify, and distribute the code as long as you comply with the terms of the license.

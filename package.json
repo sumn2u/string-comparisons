@@ -1,7 +1,7 @@
 {
   "name": "string-comparisons",
-  "version": "0.0.1",
-  "description": "a collection of string comparisions algorithms",
+  "version": "0.0.2",
+  "description": "a collection of string comparisons algorithms",
   "main": "index.js",
   "scripts": {
     "test": "jest"
