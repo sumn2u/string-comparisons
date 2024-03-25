@@ -14,6 +14,7 @@
     <script type="text/javascript" src="levenshtein.js"></script>
     <script type="text/javascript" src="jscosine.js"></script>
     <script type="text/javascript" src="jaro-winker.js"></script>
+    <script type="text/javascript" src="hamming-distance.js"></script>
     <script type="text/javascript">
         var input = [
             "MARATHA"
@@ -22,11 +23,13 @@
         var searchElem = document.getElementById("search");
         var resultElem = document.getElementById("result");
         var Levenshtein = LevenshteinDistance('foo', 'bar');
-        var jaroWrinker = JaroWrinker('abcd', 'abc')
+        var jaroWrinker = JaroWrinker('abcd', 'abc');
+        var hammingDistance =  new HammingDistance();
         var cosine = Cosinesimilarity("Julie loves me more than Linda loves me", "Jane likes me more than Julie loves me")
         console.log(Levenshtein, 'Levenshtein ==>')
         console.log(cosine, "cosine similarity")
         console.log(jaroWrinker, 'jaro wrinker')
+        console.log(HammingDistance.similarity('book', 'look'), 'hamming distance')
         searchElem.onkeyup = function () {
             var phrase = searchElem.value;
             var result = trigram.find(phrase.toUpperCase());
