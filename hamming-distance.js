@@ -1,4 +1,12 @@
 class HammingDistance {
+    /**
+     * Calculates the Hamming distance between two strings.
+     *
+     * @param {string} str1 - The first string for comparison.
+     * @param {string} str2 - The second string for comparison.
+     * @throws {Error} - If the strings are not of equal length.
+     * @returns {number} - The Hamming distance between the two strings.
+     */
     static calculate(str1, str2) {
         if (str1.length !== str2.length) {
             throw new Error('Strings must be of equal length');
@@ -12,6 +20,13 @@ class HammingDistance {
         return distance;
     }
 
+    /**
+     * Calculates the similarity between two strings based on their Hamming distance.
+     *
+     * @param {string} str1 - The first string for comparison.
+     * @param {string} str2 - The second string for comparison.
+     * @returns {number} - The similarity between the two strings, ranging from 0.0 (no similarity) to 1.0 (perfect similarity).
+     */
     static similarity(str1, str2) {
         const distance = HammingDistance.calculate(str1, str2);
         const maxLength = Math.max(str1.length, str2.length);
