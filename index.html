@@ -19,6 +19,7 @@
     <script type="text/javascript" src="jaro.js"></script>
     <script type="text/javascript" src="smith–waterman.js"></script>
     <script type="text/javascript" src="jaccard.js"></script>
+    <script type="text/javascript" src="sorensen-dice.js"></script>
     <script type="text/javascript">
         var input = [
             "MARATHA"
@@ -42,8 +43,9 @@
 
         console.log(SmithWaterman.calculate('GATTACA', 'GCATGCU'), 'Smith Waterman')
 
-        console.log(JaccardSimilarity.calculate('karolin', 'kathrin'), 'jaccard')
+        console.log(Jaccard.calculate('karolin', 'kathrin'), 'jaccard')
         
+        console.log(SorensenDice.calculate('karolin', 'kathrin'), 'Sorensen')
 
         searchElem.onkeyup = function () {
             var phrase = searchElem.value;
