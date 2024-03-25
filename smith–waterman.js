@@ -1,5 +1,5 @@
 class SmithWaterman {
-    static calculate(s1, s2, match = 2, mismatch = -1, gap = -1) {
+    static similarity(s1, s2, match = 2, mismatch = -1, gap = -1) {
         const matrix = [];
 
         // Initialize matrix

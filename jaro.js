@@ -1,5 +1,5 @@
 class Jaro {
-    static calculate(s1, s2) {
+    static similarity(s1, s2) {
         const matchDistance = Math.floor(Math.max(s1.length, s2.length) / 2) - 1;
         let matches = 0;
         let transpositions = 0;

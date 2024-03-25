@@ -1,4 +1,4 @@
-class DamerauLevenshteinDistance {
+class DamerauLevenshtein {
     static calculate(str1, str2) {
         const matrix = [];
 
@@ -32,7 +32,7 @@ class DamerauLevenshteinDistance {
     }
 
     static similarity(str1, str2) {
-        const distance = DamerauLevenshteinDistance.calculate(str1, str2);
+        const distance = DamerauLevenshtein.calculate(str1, str2);
         const maxLength = Math.max(str1.length, str2.length);
         return 1 - distance / maxLength;
     }
