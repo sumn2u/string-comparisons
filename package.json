@@ -1,0 +1,23 @@
+{
+  "name": "string-comparisons",
+  "version": "0.0.1",
+  "description": "a collection of string comparisions algorithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Suman Kunwar",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "^7.24.3",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "@babel/register": "^7.23.7"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  }
+}
