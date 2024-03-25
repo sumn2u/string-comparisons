@@ -16,6 +16,7 @@
     <script type="text/javascript" src="jaro-winker.js"></script>
     <script type="text/javascript" src="hamming-distance.js"></script>
     <script type="text/javascript" src="damerau-levenshtein-distance.js"></script>
+    <script type="text/javascript" src="jaro.js"></script>
     <script type="text/javascript">
         var input = [
             "MARATHA"
@@ -34,6 +35,8 @@
 
         console.log(DamerauLevenshteinDistance.calculate('act', 'cat'), 'damerauLevenshtein distance')
         console.log(DamerauLevenshteinDistance.similarity('act', 'cat'), 'damerauLevenshteinDistance')
+
+        console.log(Jaro.calculate('jaro', 'ajro'), 'jaro')
 
         searchElem.onkeyup = function () {
             var phrase = searchElem.value;
