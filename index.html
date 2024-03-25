@@ -17,6 +17,8 @@
     <script type="text/javascript" src="hamming-distance.js"></script>
     <script type="text/javascript" src="damerau-levenshtein-distance.js"></script>
     <script type="text/javascript" src="jaro.js"></script>
+    <script type="text/javascript" src="smith–waterman.js"></script>
+    <script type="text/javascript" src="jaccard.js"></script>
     <script type="text/javascript">
         var input = [
             "MARATHA"
@@ -37,6 +39,11 @@
         console.log(DamerauLevenshteinDistance.similarity('act', 'cat'), 'damerauLevenshteinDistance')
 
         console.log(Jaro.calculate('jaro', 'ajro'), 'jaro')
+
+        console.log(SmithWaterman.calculate('GATTACA', 'GCATGCU'), 'Smith Waterman')
+
+        console.log(JaccardSimilarity.calculate('karolin', 'kathrin'), 'jaccard')
+        
 
         searchElem.onkeyup = function () {
             var phrase = searchElem.value;
