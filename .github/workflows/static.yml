@@ -37,7 +37,7 @@ jobs:
       - name: Upload Documentation Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: docs
+          name: github-pages
           path: ./docs
 
   # Single deploy job since we're just deploying
@@ -54,9 +54,9 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Download Documentation Artifact
         uses: actions/download-artifact@v3
-        with:
-          name: docs
-          path: ./docs
+        # with:
+        #   name: github-pages
+        #   path: ./docs
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
