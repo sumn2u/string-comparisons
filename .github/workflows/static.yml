@@ -37,7 +37,7 @@ jobs:
       - name: Upload Documentation Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: docs
+          name: docs  # Artifact name matches deployment
           path: ./docs
 
   # Single deploy job since we're just deploying
@@ -55,8 +55,11 @@ jobs:
       - name: Download Documentation Artifact
         uses: actions/download-artifact@v3
         with:
-          name: docs
+          name: docs  # Artifact name matches uploaded artifact
           path: ./docs
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: docs  # Artifact name matches uploaded artifact
+          # Other deployment options like token, timeout, etc. (if needed)
