@@ -63,9 +63,6 @@ jobs:
           ls -l ./docs
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: ad-m/github-push-action@v0.8.0
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          force: true
-          directory: ./docs
+          folder: ./docs
