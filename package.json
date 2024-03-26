@@ -1,6 +1,6 @@
 {
   "name": "string-comparisons",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A collection of string comparisons algorithms",
   "main": "dist/main.js",
   "keywords": [
