@@ -27,7 +27,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          single-branch: true
-          destination: /  # Deploy to root of your GitHub Pages site
-          publish-dir: ./docs  
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: ./docs
