@@ -24,9 +24,9 @@ jobs:
           path: ./docs  
 
       - name: Deploy to GitHub Pages (optional)
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v1.0.1
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          folder: ./docs
+          ACTIONS_DEPLOY_KEY: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./docs
