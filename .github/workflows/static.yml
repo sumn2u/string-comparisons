@@ -1,3 +1,12 @@
+uses: actions/cache@v3
+with:
+  path: |
+    **/node_modules
+    !**/node_modules/**
+  key: ${{ runner.os }}-build-${{ hashFiles('**/package*.json') }}
+  restore-keys: |
+    ${{ runner.os }}-build-
+
 name: Deploy static content to Pages
 
 on:
@@ -37,7 +46,7 @@ jobs:
       - name: Upload Documentation Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: docs  # Artifact name matches deployment
+          name: docs
           path: ./docs
 
   # Single deploy job since we're just deploying
@@ -55,11 +64,11 @@ jobs:
       - name: Download Documentation Artifact
         uses: actions/download-artifact@v3
         with:
-          name: docs  # Artifact name matches uploaded artifact
+          name: docs
           path: ./docs
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: docs  # Artifact name matches uploaded artifact
+          artifact_name: docs
           # Other deployment options like token, timeout, etc. (if needed)
