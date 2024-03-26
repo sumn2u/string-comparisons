@@ -69,26 +69,17 @@ The library offers several classes:
 
 
 ```javascript
-import {
-  Cosine,
-  Jaccard,
-  Jaro,
-  DamerauLevenshtein,
-  HammingDistance,
-  JaroWrinker,
-  Levenshtein,
-  SmithWaterman,
-  SorensenDice,
-  Trigram,
-} from 'string-comparisons';
+import StringComparisons from 'string-comparisons';
+
+const { Cosine, Jaccard, Jaro, DamerauLevenshtein, HammingDistance, JaroWrinker, Levenshtein, SmithWaterman, SorensenDice, Trigram } = StringComparisons;
 
 const string1 = 'programming';
 const string2 = 'programmer';
 
 
-console.log('Jaro-Winkler similarity:', JaroWrinkler.similarity(string1, string2)); // Output: ~0.8888888888888889
-console.log('Levenshtein distance:', Levenshtein.similarity(string1, string2)); // Output: 1
-console.log('Smith-Waterman similarity:', SmithWaterman.similarity(string1, string2)); // Output: (higher score for matching characters)
+console.log('Jaro-Winkler similarity:', JaroWrinker.similarity(string1, string2)); // Output: ~0.9054545454545454
+console.log('Levenshtein distance:', Levenshtein.similarity(string1, string2)); // Output: 3
+console.log('Smith-Waterman similarity:', SmithWaterman.similarity(string1, string2)); // Output: 16
 
 const set1 = new Set([1, 2, 3]);
 const set2 = new Set([2, 3, 4]);
