@@ -44,23 +44,23 @@ The library offers several classes:
 
 - `distance(s1, s2)`: Calculates the Hamming distance between two strings `s1` and `s2` of equal length. This metric counts the number of corresponding positions where the characters differ. The returned value represents the number of mismatches between the strings.
 
-## JaroWrinkler
+### JaroWrinkler
 
 - `similarity(s1, s2):` Calculates the Jaro-Winkler similarity between strings `s1` and `s2`. The returned value is a floating-point number between 0.0 (no similarity) and 1.0 (perfect match).
 
-## Levenshtein
+### Levenshtein
 
 - `similarity(a, b):` Calculates the Levenshtein distance between strings `a` and `b`. This represents the minimum number of single-character edits (insertions, deletions, or substitutions) needed to transform `a` into `b`.
 
-## SmithWaterman
+### SmithWaterman
 
 - `similarity(s1, s2, match = 2, mismatch = -1, gap = -1):` Calculates the similarity between strings `s1` and `s2` using the Smith-Waterman algorithm. This method allows you to customize scoring parameters for matches, mismatches, and gaps in the alignment. The returned value is the maximum score achieved, indicating the similarity between the strings.
 
-## SorensenDice
+### SorensenDice
 
 - `similarity(s1, s2):` Calculates the Sørensen-Dice coefficient between sets `s1` and `s2`. This metric can be used to compare sets of elements, which can be represented as arrays or Sets in JavaScript. The returned value is a floating-point number between `0.0` (no similarity) and `1.0` (perfect similarity).
 
-## Trigram
+### Trigram
 
 - `generateTrigrams(inputString):` Generates a list of trigrams (3-character subsequences) from the given inputString.
 - `similarity(string1, string2):` Calculates the similarity between strings `string1` and `string2` based on the Jaccard similarity coefficient of their trigram sets.

@@ -1,0 +1,33 @@
+name: Deploy Docs
+
+on:
+  push:
+    branches: [ master ] 
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install JSDoc (if not globally installed)
+        run: npm install jsdoc
+
+      - name: Generate Documentation
+        run: jsdoc -c jsdoc.config.json
+
+      - name: Upload Documentation Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: docs
+          path: ./docs  
+
+      - name: Deploy to GitHub Pages (optional)
+        uses: actions/deploy-to-github-pages@v2
+        if: ${{ github.ref == 'refs/heads/gh-pages' }}  # Deploy only on gh-pages branch
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          single-branch: true
+          destination: /  # Deploy to root of your GitHub Pages site
+          publish-dir: ./docs  
