@@ -24,7 +24,7 @@ jobs:
           path: ./docs  
 
       - name: Deploy to GitHub Pages (optional)
-        uses: actions/deploy-to-github-pages@v2
+        uses: JamesIves/github-pages-deploy-action@v4
         if: ${{ github.ref == 'refs/heads/gh-pages' }}  # Deploy only on gh-pages branch
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
