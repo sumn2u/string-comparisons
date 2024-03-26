@@ -3,6 +3,12 @@
   "version": "0.0.2",
   "description": "a collection of string comparisons algorithms",
   "main": "index.js",
+  "keywords": [
+    "javascript", "algorithms", "distance", "smith-waterman",
+    "trigrams", "levenshtein-distance", "similarity-measures", "cosine-similarity",
+    "string-distance", "jaccard-similarity", "jaro-winkler-distance", "damerau-distance",
+    "hamming-distance", "string-comparison", "sorensen-dice-distance"
+  ],
   "scripts": {
     "test": "jest"
   },
