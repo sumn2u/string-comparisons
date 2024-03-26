@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build_docs:
+  build_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -42,7 +42,7 @@ jobs:
 
   # Single deploy job since we're just deploying
   deploy:
-    needs: build_docs
+    needs: build_and_deploy
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -53,13 +53,16 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Download Documentation Artifact
+        id: download
         uses: actions/download-artifact@v3
-        # with:
-        #   name: github-pages
-        #   path: ./docs
+        with:
+          name: github-pages
+          path: ./docs
+      - name: List Downloaded Artifacts
+        run: |
+          ls -l ./docs
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        # with:
-        #   artifact_name: docs
-          # Other deployment options like token, timeout, etc. (if needed)
+        with:
+          artifact_name: github-pages
