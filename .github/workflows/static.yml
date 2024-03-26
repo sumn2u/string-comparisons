@@ -33,12 +33,7 @@ jobs:
 
       - name: Generate Documentation
         run: jsdoc -c jsdoc.config.json
-
-      - name: Upload Documentation Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: docs
-          path: ./docs
+        
   # Single deploy job since we're just deploying
   deploy:
     environment:
