@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Install JSDoc (if not globally installed)
-        run: npm install jsdoc
+        run: npm install -g jsdoc
 
       - name: Generate Documentation
         run: jsdoc -c jsdoc.config.json
