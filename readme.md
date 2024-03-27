@@ -28,7 +28,7 @@ npm install string-comparisons
 ```
 
 ## Docs
-One can access the class documentation from  [here](https://sumn2u.github.io/string-comparisons/).
+Access the class documentation of each implemented algorithm from [here](https://sumn2u.github.io/string-comparisons/) and find more information on algorithms [here](algorithms.md).
 
 ##  String Similarity Algorithm Comparison
 
