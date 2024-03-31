@@ -2,7 +2,7 @@
  * Class representing the Jaro similarity algorithm.
  * @class
  */
-class Jaro {
+export default class Jaro {
     /**
      * Calculates the Jaro similarity coefficient between two strings.
      *
@@ -64,4 +64,3 @@ class Jaro {
     }
 }
 
-export default Jaro;

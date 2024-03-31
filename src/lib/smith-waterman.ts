@@ -2,7 +2,7 @@
  * Class representing the Smith-Waterman algorithm for local sequence alignment.
  * @class
  */
-class SmithWaterman {
+export default class SmithWaterman {
     /**
      * Calculates the similarity between two strings (s1 and s2) using the Smith-Waterman algorithm.
      *
@@ -13,14 +13,14 @@ class SmithWaterman {
      * @param {number} gap (optional) - The penalty for introducing gaps in the alignment (default: -1).
      * @returns {number} - The maximum score achieved during the Smith-Waterman alignment, representing the similarity between the strings.
      */
-    static similarity(s1, s2, match = 2, mismatch = -1, gap = -1) {
+    static similarity(s1: string, s2: string, match = 2, mismatch = -1, gap = -1) {
         const matrix = [];
 
         // Initialize matrix with scores for introducing gaps
         for (let i = 0; i <= s1.length; i++) {
             matrix[i] = [];
             for (let j = 0; j <= s2.length; j++) {
-                if (i === 0 || j === 0) {
+                if (i === 0 || j === 0  ) {
                     matrix[i][j] = 0; // Gap penalty for starting alignments
                 } else {
                     matrix[i][j] = 0;
@@ -54,4 +54,3 @@ class SmithWaterman {
     }
 }
 
-export default SmithWaterman;

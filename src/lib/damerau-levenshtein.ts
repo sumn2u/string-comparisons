@@ -2,7 +2,7 @@
  * Class representing the Damerau-Levenshtein distance algorithm.
  * @class
  */
-class DamerauLevenshtein {
+export default class DamerauLevenshtein {
     /**
      * Calculates the Damerau-Levenshtein distance between two strings.
      * This distance represents the minimum number of edit operations (insertion, deletion, substitution, transposition) needed to transform one string into another.
@@ -58,4 +58,3 @@ class DamerauLevenshtein {
     }
 }
 
-export default  DamerauLevenshtein

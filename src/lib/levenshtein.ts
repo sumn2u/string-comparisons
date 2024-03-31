@@ -2,7 +2,7 @@
  * Class representing Levenshtein distance calculations.
  * @class
  */
-class Levenshtein {
+export default class Levenshtein {
     /**
      * Calculates the Levenshtein distance between two strings.
      *
@@ -10,7 +10,7 @@ class Levenshtein {
      * @param {string} b - The second string for comparison.
      * @returns {number} - The Levenshtein distance, representing the minimum number of single-character edits (insertions, deletions, or substitutions) required to transform one string into the other.
      */
-    static similarity(a, b) {
+    static similarity(a: string, b: string) {
         if (a.length == 0) return b.length; // If a is empty, distance is length of b (all insertions)
         if (b.length == 0) return a.length; // If b is empty, distance is length of a (all deletions)
 
@@ -48,4 +48,3 @@ class Levenshtein {
     }
 }
 
-export default Levenshtein;

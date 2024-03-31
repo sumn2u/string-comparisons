@@ -2,7 +2,7 @@
  * Class representing Sorensen-Dice similarity calculations.
  * @class
  */
-class SorensenDice {
+export default class SorensenDice {
     /**
      * Calculates the Sørensen-Dice similarity between two sets.
      *
@@ -10,7 +10,7 @@ class SorensenDice {
      * @param {string[] | Set} s2 - The second set of elements.
      * @returns {number} - The Sørensen-Dice similarity coefficient, a value between 0.0 (no similarity) and 1.0 (perfect similarity).
      */
-    static similarity(s1, s2) {
+    static similarity<T extends string>(s1: string[]|Set<T>, s2: string[]|Set<T>) {
         // Create sets for efficient element manipulation
         const set1 = new Set(s1);
         const set2 = new Set(s2);
@@ -25,4 +25,3 @@ class SorensenDice {
     }
 }
 
-export default  SorensenDice;

@@ -2,7 +2,7 @@
  * Class representing Jaccard similarity calculations.
  * @class
  */
-class Jaccard {
+export default class Jaccard {
     /**
      * Calculates the Jaccard similarity coefficient between two sets.
      *
@@ -28,5 +28,4 @@ class Jaccard {
     }
   }
 
-  export default  Jaccard;
   

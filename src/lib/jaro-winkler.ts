@@ -2,7 +2,7 @@
  * Class representing Jaro-Winkler similarity calculations.
  * @class
  */
-class JaroWrinker {
+export default class JaroWrinker {
     /**
      * Calculates the Jaro-Winkler similarity between two strings.
      *
@@ -86,4 +86,3 @@ class JaroWrinker {
     }
 }
 
-export default JaroWrinker;

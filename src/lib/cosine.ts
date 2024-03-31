@@ -2,20 +2,23 @@
  * Class representing cosine similarity calculations.
  * @class
  */
-class Cosine {
+export default class Cosine {
     /**
      * Generates a term frequency map, counting the occurrences of each word in the input string.
      *
      * @param {string} str - The input string to analyze.
      * @returns {object} - A term frequency map with words as keys and their frequencies as values.
      */
-    static termFreqMap(str) {
+    static termFreqMap(str: string) {
         const words = str.split(' ');
-        const termFreq = {};
-        words.forEach(function(w) {
-            termFreq[w] = (termFreq[w] || 0) + 1;
-        });
-        return termFreq;
+        return words.reduce<Record<string,number>>((termFreq,w)=> {
+            if(termFreq[w]){
+                termFreq[w] = termFreq[w] + 1;
+            }else{
+                termFreq[w] = 1;
+            }
+            return termFreq;
+        },{});
     }
 
     /**
@@ -24,7 +27,7 @@ class Cosine {
      * @param {object} map - The map containing keys to add to the dictionary.
      * @param {object} dict - The dictionary to add the keys to.
      */
-    static addKeysToDict(map, dict) {
+    static addKeysToDict(map: Record<string,string>, dict: Record<string,string|boolean>) {
         for (const key in map) {
             dict[key] = true;
         }
@@ -107,4 +110,3 @@ class Cosine {
     }
 }
 
-export default Cosine;

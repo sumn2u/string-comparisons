@@ -2,7 +2,7 @@
  * Class representing Hamming Distance calculations.
  * @class
  */
-class HammingDistance {
+export default class HammingDistance {
     /**
      * Calculates the Hamming distance between two strings.
      *
@@ -39,4 +39,3 @@ class HammingDistance {
     }
   }
   
-  export default HammingDistance;
