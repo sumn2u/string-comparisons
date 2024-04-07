@@ -58,6 +58,8 @@ console.log('Trigram Jaccard similarity:', Trigram.similarity(trigram1, trigram2
 
 ```
 
+It is designed to be flexible, efficient, and easily integratable into JavaScript projects, serving both research and practical applications seamlessly.
+
 # Implementation Details
 
 [String Comparisons](https://www.npmjs.com/package/string-comparisons) is implemented in JavaScript and is available as an npm package for seamless installation and integration into Node.js projects. Each algorithm is encapsulated within a separate module, ensuring modularity and ease of use. The library's documentation includes detailed explanations of each algorithm, along with examples and performance considerations. Additionally, String Comparisons adheres to best practices in software development, with a focus on efficiency, accuracy, and ease of maintenance. 
