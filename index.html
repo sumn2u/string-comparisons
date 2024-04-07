@@ -42,6 +42,179 @@
 
 
 
+    <section>
+        <article><h1 id="string-comparisons">String Comparisons</h1>
+<p><span class="badge-npmversion"><a href="https://npmjs.org/package/string-comparisons" title="View this project on NPM"><img src="https://img.shields.io/npm/v/string-comparisons.svg" alt="NPM version" /></a></span>
+<img src="https://img.shields.io/npm/dm/string-comparisons" alt="npm">
+<a href="https://github.com/sumn2u/string-comparisons/stargazers"><img src="https://img.shields.io/github/stars/sumn2u/string-comparisons" alt="GitHub stars"></a>
+<a href="https://github.com/sumn2u/string-comparisons/blob/master/LICENCE"><img src="https://img.shields.io/github/license/sumn2u/string-comparisons" alt="GitHub license"></a>
+<img src="https://github.com/sumn2u/string-comparisons/actions/workflows/static.yml/badge.svg" alt="example workflow"></p>
+<p>This library provides a versatile collection of functions for calculating the similarity between strings, empowering you to quantify the relatedness of text data in various applications. It implements well-established similarity metrics:</p>
+<ul>
+<li><strong>Cosine Similarity</strong></li>
+<li><strong>Jaccard Similarity</strong></li>
+<li><strong>Jaro Similarity</strong></li>
+<li><strong>Damerau-Levenshtein Distance</strong></li>
+<li><strong>Hamming Distance</strong></li>
+<li><strong>Levenshtein Distance</strong></li>
+<li><strong>Smith-Waterman Alignment</strong></li>
+<li><strong>Sørensen-Dice Coefficient</strong></li>
+<li><strong>Jaccard Similarity based on Trigrams</strong></li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>Assuming you have Node.js and npm installed, install the library using:</p>
+<pre class="prettyprint source lang-bash"><code>npm install string-comparisons
+</code></pre>
+<h2 id="docs">Docs</h2>
+<p>Access the class documentation of each implemented algorithm from <a href="https://sumn2u.github.io/string-comparisons/">here</a> and find more information on algorithms <a href="algorithms.md">here</a>.</p>
+<h2 id="string-similarity-algorithm-comparison">String Similarity Algorithm Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Normalized</th>
+<th>Metric</th>
+<th>Similarity</th>
+<th>Distance</th>
+<th>Space Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cosine.js</td>
+<td>Yes</td>
+<td>Vector Space Model</td>
+<td>✓</td>
+<td></td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>jaro.js</td>
+<td>No</td>
+<td>Edit Distance</td>
+<td>✓</td>
+<td></td>
+<td>O(min(n, m))</td>
+</tr>
+<tr>
+<td>jaccard.js</td>
+<td>No</td>
+<td>Set Theory</td>
+<td>✓</td>
+<td></td>
+<td>O(min(n, m))</td>
+</tr>
+<tr>
+<td>damerauLevenshtein.js</td>
+<td>No</td>
+<td>Edit Distance</td>
+<td></td>
+<td>✓</td>
+<td>O(max(n, m)²)</td>
+</tr>
+<tr>
+<td>hammingDistance.js</td>
+<td>No</td>
+<td>Bitwise Operations</td>
+<td>✓</td>
+<td></td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>jaroWinkler.js</td>
+<td>No</td>
+<td>Edit Distance</td>
+<td>✓</td>
+<td></td>
+<td>O(min(n, m))</td>
+</tr>
+<tr>
+<td>levenshtein.js</td>
+<td>No</td>
+<td>Edit Distance</td>
+<td></td>
+<td>✓</td>
+<td>O(max(n, m)²)</td>
+</tr>
+<tr>
+<td>smithWaterman.js</td>
+<td>No</td>
+<td>Dynamic Programming (Local Alignment)</td>
+<td>✓</td>
+<td></td>
+<td>O(n * m)</td>
+</tr>
+<tr>
+<td>sorensenDice.js</td>
+<td>No</td>
+<td>Set Theory</td>
+<td>✓</td>
+<td></td>
+<td>O(min(n, m))</td>
+</tr>
+<tr>
+<td>trigram.js</td>
+<td>No</td>
+<td>N-gram Overlap</td>
+<td>✓</td>
+<td></td>
+<td>O(n²)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Explanation of Columns:</strong></p>
+<ul>
+<li><strong>Normalized:</strong> Indicates whether the algorithm produces a score between 0 and 1 (normalized).</li>
+<li><strong>Metric:</strong> The underlying mathematical concept used for comparison.</li>
+<li><strong>Similarity:</strong> Whether the algorithm outputs a higher score for more similar strings.</li>
+<li><strong>Distance:</strong> Whether the algorithm outputs a lower score for more similar strings. (One algorithm might use similarity, another distance - they provide the opposite information).</li>
+<li><strong>Space Complexity:</strong> The amount of extra memory the algorithm needs to run the comparison.</li>
+</ul>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>✓ indicates the algorithm applies to that category.</li>
+<li>Some algorithms can be used for both similarity and distance calculations depending on the interpretation of the score.</li>
+</ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre class="prettyprint source lang-javascript"><code>import StringComparisons from 'string-comparisons';
+
+const { Cosine, Jaccard, Jaro, DamerauLevenshtein, HammingDistance, JaroWrinker, Levenshtein, SmithWaterman, SorensenDice, Trigram } = StringComparisons;
+
+const string1 = 'programming';
+const string2 = 'programmer';
+
+
+console.log('Jaro-Winkler similarity:', JaroWrinker.similarity(string1, string2)); // Output: ~0.9054545454545454
+console.log('Levenshtein distance:', Levenshtein.similarity(string1, string2)); // Output: 3
+console.log('Smith-Waterman similarity:', SmithWaterman.similarity(string1, string2)); // Output: 16
+
+const set1 = new Set([1, 2, 3]);
+const set2 = new Set([2, 3, 4]);
+
+console.log('Sørensen-Dice similarity:', SorensenDice.similarity(set1, set2)); // Output: 0.6666666666666667
+
+const trigram1 = 'hello';
+const trigram2 = 'world';
+
+console.log('Trigram Jaccard similarity:', Trigram.similarity(trigram1, trigram2)); // Output: 0 (no shared trigrams)
+
+// so on
+</code></pre>
+<h2 id="contributing">Contributing</h2>
+<p>We encourage contributions to this library! Feel free to fork the repository, make your changes, and submit pull requests.</p>
+<h2 id="support-the-project-%E2%AD%90">Support the Project <a name="support-the-project"></a>⭐</h2>
+<p>If you feel awesome and want to support us in a small way, please consider starring and sharing the repo! This helps us get visibility and allow the community to grow. 🙏</p>
+<h2 id="contact-us">Contact Us</h2>
+<p>If you have any questions or feedback, please don't hesitate to contact us at sumn2u@gmail.com, or reach out to Suman directly. We hope you find this resource helpful 💜.</p>
+<h2 id="license-information">License Information</h2>
+<p>This project is licensed under the  <a href="./LICENSE">MIT</a> , which means that you are free to use, modify, and distribute the code as long as you comply with the terms of the license.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://sumn2u.medium.com/string-similarity-comparision-in-js-with-examples-4bae35f13968">String Similarity Comparision in JS with Examples</a></li>
+<li><a href="https://yassineelkhal.medium.com/the-complete-guide-to-string-similarity-algorithms-1290ad07c6b7">The complete guide to string similarity algorithms</a></li>
+</ul></article>
+    </section>
+
 
 
 
@@ -56,7 +229,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Wed Mar 27 2024 14:09:56 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sun Apr 07 2024 15:00:19 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>
