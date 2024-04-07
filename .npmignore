@@ -11,4 +11,5 @@ algorithms.md
 index.md
 readme.md
 webpack.config.js
-
+babel.config.js
+index.js
