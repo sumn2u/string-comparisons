@@ -1,11 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
+
 
 module.exports = {
   entry: './index.js',
   mode: 'production',
   output: {
-    filename: '[name].js',
+    filename: '[name].min.js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',  // Generate UMD bundle
     globalObject: 'this', // This line ensures `this` is used as the global object
@@ -23,6 +25,9 @@ module.exports = {
         },
       },
     ],
+  },
+  optimization: {
+    minimizer: [new TerserPlugin()], // Add TerserPlugin for minification
   },
   plugins: [
     new webpack.DefinePlugin({
