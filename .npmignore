@@ -1,3 +1,14 @@
 /test
 /out
+/docs
+/.github
+/lib
 jsdoc.config.json
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE
+algorithms.md
+index.md
+readme.md
+webpack.config.js
+
