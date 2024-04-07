@@ -27,8 +27,6 @@ Assuming you have Node.js and npm installed, install the library using:
 npm install string-comparisons
 ```
 
-## Docs
-Access the class documentation of each implemented algorithm from [here](https://sumn2u.github.io/string-comparisons/) and find more information on algorithms [here](algorithms.md).
 
 ##  String Similarity Algorithm Comparison
 
@@ -88,21 +86,6 @@ console.log('Trigram Jaccard similarity:', Trigram.similarity(trigram1, trigram2
 // so on
 ```
 
-## Contributing
-
-We encourage contributions to this library! Feel free to fork the repository, make your changes, and submit pull requests.
-
-## Support the Project <a name="support-the-project"></a>⭐
-
-If you feel awesome and want to support us in a small way, please consider starring and sharing the repo! This helps us get visibility and allow the community to grow. 🙏
-
-
-## Contact Us
-If you have any questions or feedback, please don't hesitate to contact us at sumn2u@gmail.com, or reach out to Suman directly. We hope you find this resource helpful 💜.
-
-
-## License Information
-This project is licensed under the  [MIT](./LICENSE) , which means that you are free to use, modify, and distribute the code as long as you comply with the terms of the license.
 
 ## Resources
 - [String Similarity Comparision in JS with Examples](https://sumn2u.medium.com/string-similarity-comparision-in-js-with-examples-4bae35f13968)
