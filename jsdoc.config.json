@@ -1,6 +1,6 @@
 {
     "source": {
-        "include": ["lib/Cosine.js", "lib/Trigram.js", "lib/smithWaterman.js","lib/Jaccard.js","lib/damerauLevenshtein.js","lib/sorensenDice.js","lib/Jaro.js","lib/hammingDistance.js","lib/Levenshtein.js","lib/jaroWinkler.js"],
+        "include": ["index.md", "lib/Cosine.js", "lib/Trigram.js", "lib/smithWaterman.js","lib/Jaccard.js","lib/damerauLevenshtein.js","lib/sorensenDice.js","lib/Jaro.js","lib/hammingDistance.js","lib/Levenshtein.js","lib/jaroWinkler.js"],
         "exclude": ["test/*"],
         "includePattern": ".+\\.js(doc|x)?$",
         "excludePattern": "(^|\\/|\\\\)_"
@@ -10,5 +10,16 @@
         "lenient": false,
         "private": false,
         "destination": "./docs/"
+    },
+    "plugins": ["plugins/markdown"],
+    "markdown": {
+        "idInHeadings": true
+    },
+    "templates": {
+        "cleverLinks": false,
+       "monospaceLinks": false
+    },
+    "docdash": {
+        "static": true
     }
 }
