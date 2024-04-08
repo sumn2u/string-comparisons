@@ -24,7 +24,7 @@ String Comparisons is a comprehensive JavaScript library designed to facilitate 
 # Statement of need
 In fields such as natural language processing, information retrieval, and data minin[@yan_overview_2022], quantifying the similarity between textual entities is crucial [@amur_short-text_2023]. Over the last two decades, extensive research has been conducted in this domain, resulting in the development of various string comparison algorithms[@hakak_exact_2019]. While there are some JavaScript libraries available, such as [string-comparisons](https://www.npmjs.com/package/string-comparison), [compare-strings](https://www.npmjs.com/package/compare-strings), and [string-similarity-js](https://www.npmjs.com/package/string-similarity-js), they offer a limited number of algorithms and often come with larger package sizes.
 
-Existing JavaScript libraries frequently lack a comprehensive set of similarity metrics, which can make it challenging for developers to select the most suitable algorithm for their specific use case. String Comparisons aims to address this gap by providing a versatile collection of algorithms, enabling developers to conduct accurate and efficient text similarity analysis.
+These libraries lack a comprehensive set of similarity metrics, hindering developers ability to select the most suitable algorithm for their specific use cases. String Comparisons aims to address this gap by providing a versatile collection of algorithms, enabling developers to conduct accurate and efficient text similarity analysis.
 
 # Usage
 
