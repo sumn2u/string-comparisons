@@ -42,6 +42,7 @@ npm install string-comparisons
 | smithWaterman.js       | No         | Dynamic Programming (Local Alignment)  | ✓          |          | O(n * m)         |
 | sorensenDice.js        | No         | Set Theory                              | ✓          |          | O(min(n, m))     |
 | trigram.js             | No         | N-gram Overlap                          | ✓          |          | O(n²)            |
+| szymkiewiczSimpsonOverlap.js             | No         | N-gram Overlap                          | ✓          |          | O(n²)            |
 
 **Explanation of Columns:**
 
