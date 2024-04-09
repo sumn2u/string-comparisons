@@ -25,7 +25,15 @@ This library provides a versatile collection of functions for calculating the si
 Assuming you have Node.js and npm installed, install the library using:
 
 ```bash
+# Install the 'string-comparisons' package using npm
 npm install string-comparisons
+
+# Alternatively, install the 'string-comparison' package using yarn
+yarn add string-comparison
+
+# Or, install the 'string-comparison' package using pnpm
+pnpm add string-comparison
+
 ```
 
 
