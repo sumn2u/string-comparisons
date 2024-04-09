@@ -40,19 +40,24 @@ const string1 = 'programming';
 const string2 = 'programmer';
 
 
-console.log('Jaro-Winkler similarity:', JaroWrinker.similarity(string1, string2)); // Output: ~0.9054545454545454
-console.log('Levenshtein distance:', Levenshtein.similarity(string1, string2)); // Output: 3
-console.log('Smith-Waterman similarity:', SmithWaterman.similarity(string1, string2)); // Output: 16
+console.log('Jaro-Winkler similarity:', JaroWrinker.similarity(string1, string2)); 
+// Output: ~0.9054545454545454
+console.log('Levenshtein distance:', Levenshtein.similarity(string1, string2));
+// Output: 3
+console.log('Smith-Waterman similarity:', SmithWaterman.similarity(string1, string2)); 
+// Output: 16
 
 const set1 = new Set([1, 2, 3]);
 const set2 = new Set([2, 3, 4]);
 
-console.log('Sørensen-Dice similarity:', SorensenDice.similarity(set1, set2)); // Output: 0.6666666666666667
+console.log('Sørensen-Dice similarity:', SorensenDice.similarity(set1, set2)); 
+// Output: 0.6666666666666667
 
 const trigram1 = 'hello';
 const trigram2 = 'world';
 
-console.log('Trigram Jaccard similarity:', Trigram.similarity(trigram1, trigram2)); // Output: 0 (no shared trigrams)
+console.log('Trigram Jaccard similarity:', Trigram.similarity(trigram1, trigram2)); 
+// Output: 0 (no shared trigrams)
 
 // so on
 
