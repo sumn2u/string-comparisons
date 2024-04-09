@@ -44,7 +44,7 @@ Access the class documentation of each implemented algorithm from [here](https:/
 | smithWaterman.js       | No         | Dynamic Programming (Local Alignment)  | ✓          |          | O(n * m)         |
 | sorensenDice.js        | No         | Set Theory                              | ✓          |          | O(min(n, m))     |
 | trigram.js             | No         | N-gram Overlap                          | ✓          |          | O(n²)            |
-| szymkiewiczSimpsonOverlap.js             | No         | N-gram Overlap                          | ✓          |          | O(n²)            |
+| szymkiewiczSimpsonOverlap.js             | Yes         | Overlap Coefficient                          |  ✓         |          | O(min(m, n))            |
 
 **Explanation of Columns:**
 
