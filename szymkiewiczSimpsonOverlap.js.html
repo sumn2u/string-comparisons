@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: sorensenDice.js</title>
+    <title>JSDoc: Source: szymkiewiczSimpsonOverlap.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: sorensenDice.js</h1>
+    <h1 class="page-title">Source: szymkiewiczSimpsonOverlap.js</h1>
 
     
 
@@ -27,33 +27,30 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Class representing Sorensen-Dice similarity calculations.
- * @class
+ * Class to calculate the Szymkiewicz-Simpson Overlap coefficient between two data sets.
  */
-class SorensenDice {
+class SzymkiewiczSimpsonOverlap {
     /**
-     * Calculates the Sørensen-Dice similarity between two sets.
-     *
-     * @param {string[] | Set} s1 - The first set of elements.
-     * @param {string[] | Set} s2 - The second set of elements.
-     * @returns {number} - The Sørensen-Dice similarity coefficient, a value between 0.0 (no similarity) and 1.0 (perfect similarity).
+     * Calculates the Szymkiewicz-Simpson Overlap coefficient between two data sets.
+     * 
+     * @param {Array&lt;*>} data1 - The first data set.
+     * @param {Array&lt;*>} data2 - The second data set.
+     * @throws {Error} - If either data set is missing.
+     * @returns {number} - The overlap coefficient between 0 and 1.
      */
-    static similarity(s1, s2) {
-        // Create sets for efficient element manipulation
-        const set1 = new Set(s1);
-        const set2 = new Set(s2);
+    static overlap(data1, data2) {
+      if (!data1 || !data2) {
+        throw new Error("Missing data for Szymkiewicz-Simpson Overlap coefficient calculation");
+      }
 
-        // Calculate the number of elements in the intersection (common elements)
-        const intersectionSize = [...set1].filter(x => set2.has(x)).length;
+      const intersection = data1.filter((item) => data2.includes(item));
+      const union = new Set([...data1, ...data2]);
 
-        // Apply the Sørensen-Dice formula to compute the similarity
-        const similarity = (2 * intersectionSize) / (set1.size + set2.size);
-
-        return similarity;
+      return intersection.length / union.size;
     }
-}
+  }
 
-export default  SorensenDice;</code></pre>
+  export default SzymkiewiczSimpsonOverlap;</code></pre>
         </article>
     </section>
 
