@@ -17,6 +17,7 @@ This library provides a versatile collection of functions for calculating the si
 - **Smith-Waterman Alignment**
 - **Sørensen-Dice Coefficient**
 - **Jaccard Similarity based on Trigrams**
+- **Szymkiewicz Simpson Overlap**
 
 
 ## Installation
