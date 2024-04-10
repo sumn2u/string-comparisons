@@ -28,11 +28,11 @@ Assuming you have Node.js and npm installed, install the library using:
 # Install the 'string-comparisons' package using npm
 npm install string-comparisons
 
-# Alternatively, install the 'string-comparison' package using yarn
-yarn add string-comparison
+# Alternatively, install the 'string-comparisons' package using yarn
+yarn add string-comparisons
 
-# Or, install the 'string-comparison' package using pnpm
-pnpm add string-comparison
+# Or, install the 'string-comparisons' package using pnpm
+pnpm add string-comparisons
 
 ```
 
