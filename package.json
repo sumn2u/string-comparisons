@@ -1,6 +1,6 @@
 {
   "name": "string-comparisons",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "A collection of string comparisons algorithms",
   "main": "dist/main.min.js",
   "keywords": [
@@ -18,7 +18,8 @@
     "damerau-distance",
     "hamming-distance",
     "string-comparison",
-    "sorensen-dice-distance"
+    "sorensen-dice-distance",
+    "n-gram"
   ],
   "scripts": {
     "test": "jest",
