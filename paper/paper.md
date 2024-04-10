@@ -34,7 +34,14 @@ String Comparisons offers a versatile solution for developers across a wide arra
 
 import StringComparisons from 'string-comparisons';
 
-const { JaroWrinker, Levenshtein, SmithWaterman, SorensenDice, Trigram  } = StringComparisons;
+const { 
+  JaroWrinker, 
+  Levenshtein, 
+  SmithWaterman, 
+  SorensenDice, 
+  Trigram 
+} = StringComparisons;
+
 
 const strings = ['programming', 'programmer'];
 const sets = [new Set([1, 2, 3]), new Set([2, 3, 4])];
