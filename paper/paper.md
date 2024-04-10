@@ -34,32 +34,30 @@ String Comparisons offers a versatile solution for developers across a wide arra
 
 import StringComparisons from 'string-comparisons';
 
-const { JaroWrinker, Levenshtein, SmithWaterman, SorensenDice, Trigram } = StringComparisons;
+const { JaroWrinker, Levenshtein, SmithWaterman, SorensenDice, Trigram  } = StringComparisons;
 
-const string1 = 'programming';
-const string2 = 'programmer';
+const strings = ['programming', 'programmer'];
+const sets = [new Set([1, 2, 3]), new Set([2, 3, 4])];
+const trigrams = ['hello', 'world'];
 
+const jaroWinklerSimilarity = JaroWrinker.similarity(...strings);
+const levenshteinDistance = Levenshtein.similarity(...strings);
+const smithWatermanSimilarity = SmithWaterman.similarity(...strings);
+const sorensenDiceSimilarity = SorensenDice.similarity(...sets);
+const trigramJaccardSimilarity = Trigram.similarity(...trigrams);
 
-console.log('Jaro-Winkler similarity:', JaroWrinker.similarity(string1, string2)); 
-// Output: ~0.9054545454545454
-console.log('Levenshtein distance:', Levenshtein.similarity(string1, string2));
-// Output: 3
-console.log('Smith-Waterman similarity:', SmithWaterman.similarity(string1, string2)); 
-// Output: 16
+console.log('Jaro-Winkler similarity:', jaroWinklerSimilarity);
+console.log('Levenshtein distance:', levenshteinDistance);
+console.log('Smith-Waterman similarity:', smithWatermanSimilarity); 
+console.log('Sørensen-Dice similarity:', sorensenDiceSimilarity);
+console.log('Trigram Jaccard similarity:', trigramJaccardSimilarity); 
 
-const set1 = new Set([1, 2, 3]);
-const set2 = new Set([2, 3, 4]);
-
-console.log('Sørensen-Dice similarity:', SorensenDice.similarity(set1, set2)); 
-// Output: 0.6666666666666667
-
-const trigram1 = 'hello';
-const trigram2 = 'world';
-
-console.log('Trigram Jaccard similarity:', Trigram.similarity(trigram1, trigram2)); 
-// Output: 0 (no shared trigrams)
-
-// so on
+// --- Ouput --
+// Jaro-Winkler similarity: 0.9054545454545454
+// Levenshtein distance: 3
+// Smith-Waterman similarity: 16
+// Sørensen-Dice similarity: 0.6666666666666666
+// Trigram Jaccard similarity: 0
 
 ```
 
