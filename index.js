@@ -10,6 +10,7 @@ import SmithWaterman from './lib/smithWaterman';
 import SorensenDice from './lib/sorensenDice';
 import Trigram from './lib/Trigram';
 import SzymkiewiczSimpsonOverlap from './lib/szymkiewiczSimpsonOverlap';
+import Ngram from './lib/nGram';
 
 // Export all the imported similarity functions for use in other modules
 export {
@@ -23,5 +24,6 @@ export {
   SmithWaterman,
   SorensenDice,
   Trigram,
-  SzymkiewiczSimpsonOverlap
+  SzymkiewiczSimpsonOverlap,
+  Ngram
 };
