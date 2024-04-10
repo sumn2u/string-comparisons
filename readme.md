@@ -20,6 +20,7 @@ This library provides a versatile collection of functions for calculating the si
 - **Szymkiewicz Simpson Overlap**
 - **N-Gram**
 - **Q-Gram**
+- **Optimal String Alignment**
 
 
 ## Installation
@@ -57,6 +58,7 @@ Access the class documentation of each implemented algorithm from [here](https:/
 | szymkiewiczSimpsonOverlap.js             | Yes         | Overlap Coefficient                          |  ✓         |          | O(min(m, n))            |
 | nGram.js             | Yes         | Jaccard similarity coefficient                          | ✓          |          | O(m * n)            |
 | qGram.js             | Yes         | Jaccard similarity coefficient                          | ✓          |          | O(n + m)            |
+| optimalStringAlignment.js             | No         | Edit distance                          |         |      ✓      | O(max(n, m)²)             |
 
 **Explanation of Columns:**
 

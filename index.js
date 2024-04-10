@@ -12,6 +12,7 @@ import Trigram from './lib/Trigram';
 import SzymkiewiczSimpsonOverlap from './lib/szymkiewiczSimpsonOverlap';
 import Ngram from './lib/nGram';
 import Qgram from './lib/qGram';
+import OptimalStringAlignment from './lib/optimalStringAlignment';
 
 // Export all the imported similarity functions for use in other modules
 export {
@@ -27,5 +28,6 @@ export {
   Trigram,
   SzymkiewiczSimpsonOverlap,
   Ngram,
-  Qgram
+  Qgram,
+  OptimalStringAlignment
 };
