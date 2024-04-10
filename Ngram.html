@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: sorensenDice.js</title>
+    <title>JSDoc: Class: Ngram</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,45 +17,137 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: sorensenDice.js</h1>
+    <h1 class="page-title">Class: Ngram</h1>
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
- * Class representing Sorensen-Dice similarity calculations.
- * @class
- */
-class SorensenDice {
-    /**
-     * Calculates the Sørensen-Dice similarity between two sets.
-     *
-     * @param {string[] | Set} s1 - The first set of elements.
-     * @param {string[] | Set} s2 - The second set of elements.
-     * @returns {number} - The Sørensen-Dice similarity coefficient, a value between 0.0 (no similarity) and 1.0 (perfect similarity).
-     */
-    static similarity(s1, s2) {
-        // Create sets for efficient element manipulation
-        const set1 = new Set(s1);
-        const set2 = new Set(s2);
+        <h2><span class="attribs"><span class="type-signature"></span></span>Ngram<span class="signature">()</span><span class="type-signature"></span></h2>
+        
+    
+</header>
 
-        // Calculate the number of elements in the intersection (common elements)
-        const intersectionSize = [...set1].filter(x => set2.has(x)).length;
+<article>
+    <div class="container-overview">
+    
+        
 
-        // Apply the Sørensen-Dice formula to compute the similarity
-        const similarity = (2 * intersectionSize) / (set1.size + set2.size);
+    
 
-        return similarity;
-    }
-}
+    
+    <h4 class="name" id="Ngram"><span class="type-signature"></span>new Ngram<span class="signature">()</span><span class="type-signature"></span></h4>
+    
 
-export default  SorensenDice;</code></pre>
-        </article>
-    </section>
+    
+
+
+
+<div class="description">
+    <p>This class calculates the similarity between two strings using n-grams.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="nGram.js.html">nGram.js</a>, <a href="nGram.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
