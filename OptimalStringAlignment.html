@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Jaro</title>
+    <title>JSDoc: Class: OptimalStringAlignment</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Jaro</h1>
+    <h1 class="page-title">Class: OptimalStringAlignment</h1>
 
     
 
@@ -28,9 +28,9 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Jaro<span class="signature">()</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>OptimalStringAlignment<span class="signature">()</span><span class="type-signature"></span></h2>
         
-            <div class="class-description"><p>Class representing the Jaro similarity algorithm.</p></div>
+            <div class="class-description"><p>Class for calculating Optimal String Alignment (Levenshtein Distance) between strings.</p></div>
         
     
 </header>
@@ -45,7 +45,7 @@
     
 
     
-    <h4 class="name" id="Jaro"><span class="type-signature"></span>new Jaro<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="OptimalStringAlignment"><span class="type-signature"></span>new OptimalStringAlignment<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
     
@@ -93,7 +93,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Jaro.js.html">Jaro.js</a>, <a href="Jaro.js.html#line5">line 5</a>
+        <a href="optimalStringAlignment.js.html">optimalStringAlignment.js</a>, <a href="optimalStringAlignment.js.html#line4">line 4</a>
     </li></ul></dd>
     
 
@@ -149,7 +149,7 @@
     
 
     
-    <h4 class="name" id=".similarity"><span class="type-signature">(static) </span>similarity<span class="signature">(s1, s2)</span><span class="type-signature"> &rarr; {float}</span></h4>
+    <h4 class="name" id=".calculate"><span class="type-signature">(static) </span>calculate<span class="signature">(str1, str2, gapPenalty<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {number}</span></h4>
     
 
     
@@ -157,7 +157,7 @@
 
 
 <div class="description">
-    <p>Calculates the Jaro similarity coefficient between two strings.</p>
+    <p>Calculates the minimum number of edits required to transform one string to another.</p>
 </div>
 
 
@@ -181,7 +181,11 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -193,7 +197,7 @@
 
         <tr>
             
-                <td class="name"><code>s1</code></td>
+                <td class="name"><code>str1</code></td>
             
 
             <td class="type">
@@ -206,17 +210,29 @@
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last"><p>The first string for comparison.</p></td>
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>The first string.</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>s2</code></td>
+                <td class="name"><code>str2</code></td>
             
 
             <td class="type">
@@ -229,10 +245,61 @@
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last"><p>The second string for comparison.</p></td>
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>The second string.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>gapPenalty</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
+
+            <td class="description last"><p>The penalty for gaps (insertions/deletions).</p></td>
         </tr>
 
     
@@ -273,7 +340,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Jaro.js.html">Jaro.js</a>, <a href="Jaro.js.html#line13">line 13</a>
+        <a href="optimalStringAlignment.js.html">optimalStringAlignment.js</a>, <a href="optimalStringAlignment.js.html#line13">line 13</a>
     </li></ul></dd>
     
 
@@ -303,7 +370,7 @@
         
 <div class="param-desc">
     <ul>
-<li>The Jaro similarity coefficient between the two strings, ranging from 0.0 (no similarity) to 1.0 (perfect similarity).</li>
+<li>The Levenshtein distance (number of edits).</li>
 </ul>
 </div>
 
@@ -315,7 +382,7 @@
     </dt>
     <dd>
         
-<span class="param-type">float</span>
+<span class="param-type">number</span>
 
 
     </dd>

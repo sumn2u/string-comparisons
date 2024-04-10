@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: hammingDistance.js</title>
+    <title>JSDoc: Source: optimalStringAlignment.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: hammingDistance.js</h1>
+    <h1 class="page-title">Source: optimalStringAlignment.js</h1>
 
     
 
@@ -27,47 +27,48 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Class representing Hamming Distance calculations.
- * @class
+ * Class for calculating Optimal String Alignment (Levenshtein Distance) between strings.
  */
-class HammingDistance {
+class OptimalStringAlignment {
     /**
-     * Calculates the Hamming distance between two strings.
-     *
-     * @param {string} str1 - The first string for comparison.
-     * @param {string} str2 - The second string for comparison.
-     * @returns {number} - The Hamming distance between the two strings.
-     * @throws {Error} - If the strings have different lengths.
+     * Calculates the minimum number of edits required to transform one string to another.
+     * 
+     * @param {string} str1 - The first string.
+     * @param {string} str2 - The second string.
+     * @param {number} [gapPenalty=1] - The penalty for gaps (insertions/deletions).
+     * @returns {number} - The Levenshtein distance (number of edits).
      */
-    static calculate(str1, str2) {
-      if (str1.length !== str2.length) {
-        throw new Error('Strings must have the same length');
+    static calculate(str1, str2, gapPenalty = 1) {
+      const m = str1.length + 1;
+      const n = str2.length + 1;
+      const dp = []; // Create a DP table
+  
+      // Initialize first row and column with gap penalties
+      for (let i = 0; i &lt; m; i++) {
+        dp[i] = new Array(n).fill(i * gapPenalty);
+      }
+      for (let j = 0; j &lt; n; j++) {
+        dp[0][j] = j * gapPenalty;
       }
   
-      let distance = 0;
-      for (let i = 0; i &lt; str1.length; i++) {
-        if (str1[i] !== str2[i]) {
-          distance++;
+      // Fill the DP table
+      for (let i = 1; i &lt; m; i++) {
+        for (let j = 1; j &lt; n; j++) {
+          const cost = str1[i - 1] === str2[j - 1] ? 0 : 1;
+          dp[i][j] = Math.min(
+            dp[i - 1][j] + gapPenalty, // Deletion
+            dp[i][j - 1] + gapPenalty, // Insertion
+            dp[i - 1][j - 1] + cost         // Substitution
+          );
         }
       }
   
-      return distance;
-    }
-  
-    /**
-     * Calculates the similarity between two strings based on their Hamming distance.
-     *
-     * @param {string} str1 - The first string for comparison.
-     * @param {string} str2 - The second string for comparison.
-     * @returns {number} - The similarity between the two strings, ranging from 0.0 (no similarity) to 1.0 (perfect similarity).
-     */
-    static similarity(str1, str2) {
-      const distance = HammingDistance.calculate(str1, str2);
-      return 1 - distance / str1.length;
+      return dp[m - 1][n - 1]; // Distance is in the bottom right corner
     }
   }
-  
-  export default HammingDistance;</code></pre>
+
+
+  export default OptimalStringAlignment;</code></pre>
         </article>
     </section>
 
