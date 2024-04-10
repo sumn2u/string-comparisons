@@ -1,6 +1,6 @@
 {
     "source": {
-        "include": ["index.md", "lib/Cosine.js", "lib/Trigram.js", "lib/smithWaterman.js","lib/Jaccard.js","lib/damerauLevenshtein.js","lib/sorensenDice.js","lib/Jaro.js","lib/hammingDistance.js","lib/Levenshtein.js","lib/jaroWinkler.js", "lib/szymkiewiczSimpsonOverlap.js"],
+        "include": ["index.md", "lib/Cosine.js", "lib/Trigram.js", "lib/smithWaterman.js","lib/Jaccard.js","lib/damerauLevenshtein.js","lib/sorensenDice.js","lib/Jaro.js","lib/hammingDistance.js","lib/Levenshtein.js","lib/jaroWinkler.js", "lib/szymkiewiczSimpsonOverlap.js", "lib/nGram.js", "lib/qGram.js"],
         "exclude": ["test/*"],
         "includePattern": ".+\\.js(doc|x)?$",
         "excludePattern": "(^|\\/|\\\\)_"

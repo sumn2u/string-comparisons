@@ -11,6 +11,7 @@ import SorensenDice from './lib/sorensenDice';
 import Trigram from './lib/Trigram';
 import SzymkiewiczSimpsonOverlap from './lib/szymkiewiczSimpsonOverlap';
 import Ngram from './lib/nGram';
+import Qgram from './lib/qGram';
 
 // Export all the imported similarity functions for use in other modules
 export {
@@ -25,5 +26,6 @@ export {
   SorensenDice,
   Trigram,
   SzymkiewiczSimpsonOverlap,
-  Ngram
+  Ngram,
+  Qgram
 };

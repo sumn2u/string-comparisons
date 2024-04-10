@@ -19,6 +19,7 @@ This library provides a versatile collection of functions for calculating the si
 - **Jaccard Similarity based on Trigrams**
 - **Szymkiewicz Simpson Overlap**
 - **N-Gram**
+- **Q-Gram**
 
 
 ## Installation
@@ -53,7 +54,8 @@ pnpm add string-comparisons
 | sorensenDice.js        | No         | Set Theory                              | ✓          |          | O(min(n, m))     |
 | trigram.js             | No         | N-gram Overlap                          | ✓          |          | O(n²)            |
 | szymkiewiczSimpsonOverlap.js             | Yes         | Overlap Coefficient                          |  ✓         |          | O(min(m, n))            |
-| nGram.js             | Yes         | Jaccard similarity coefficient                          | ✓          |          | O(n + m)            |
+| nGram.js             | Yes         | Jaccard similarity coefficient                          | ✓          |          | O(m * n)            |
+| qGram.js             | Yes         | Jaccard similarity coefficient                          | ✓          |          | O(n + m)
 
 **Explanation of Columns:**
 
