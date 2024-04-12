@@ -6,7 +6,7 @@
 ![example workflow](https://github.com/sumn2u/string-comparisons/actions/workflows/static.yml/badge.svg
 )
 
-This library provides a versatile collection of functions for calculating the similarity between strings, empowering you to quantify the relatedness of text data in various applications. It implements well-established similarity metrics:
+This library offers a range of functions to calculate text similarity, allowing you to measure the likeness of text data in an application. It implements well-established similarity metrics. The library currently supports the following algorithms:
 
 - **Cosine Similarity**
 - **Jaccard Similarity**
