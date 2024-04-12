@@ -1,4 +1,4 @@
-import Trigram from '../lib/trigram'; 
+import Trigram from '../lib/Trigram'; 
 
 describe('Trigram Calculations', () => {
   test('generates trigrams from a string', () => {

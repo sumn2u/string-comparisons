@@ -1,4 +1,4 @@
-import Levenshtein from '../lib/levenshtein';
+import Levenshtein from '../lib/Levenshtein';
 
 describe('Levenshtein Distance', () => {
   test('calculates distance for identical strings', () => {

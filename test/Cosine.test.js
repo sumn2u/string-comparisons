@@ -1,4 +1,4 @@
-import  Cosine  from '../lib/cosine';
+import  Cosine  from '../lib/Cosine';
 
 describe('Cosine Similarity', () => {
   it('calculates similarity between identical strings', () => {

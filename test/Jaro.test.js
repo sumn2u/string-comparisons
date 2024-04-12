@@ -1,4 +1,4 @@
-import Jaro from '../lib/jaro'
+import Jaro from '../lib/Jaro'
 
 describe('Jaro Similarity', () => {
   test('calculates similarity for identical strings', () => {
