@@ -109,3 +109,4 @@ console.log('Trigram Jaccard similarity:', Trigram.similarity(trigram1, trigram2
 - [N-Gram Similarity and Distance](https://webdocs.cs.ualberta.ca/~kondrak/papers/spire05.pdf)
 - [Approximate string-matching with q-grams and maximal matches](https://www.sciencedirect.com/science/article/pii/0304397592901434)
 - [Research on string similarity algorithm based on Levenshtein Distance](https://ieeexplore.ieee.org/document/8054419)
+- [String similarity search and join: a survey](https://link.springer.com/article/10.1007/s11704-015-5900-5)
