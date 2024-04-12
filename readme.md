@@ -25,7 +25,7 @@ This library offers a range of functions to calculate text similarity, allowing 
 
 ## Installation
 
-Assuming you have Node.js and npm installed, install the library using:
+Assuming you have [Node.js](https://nodejs.org/en) and [npm](https://www.npmjs.com)/[yarn](https://yarnpkg.com)/[pnpm](https://pnpm.io/) installed, install the library using:
 
 ```bash
 # Install the 'string-comparisons' package using npm
