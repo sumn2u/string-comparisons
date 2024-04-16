@@ -1,8 +1,8 @@
 import Jaccard from '../lib/Jaccard'; 
 
 describe('Jaccard Similarity', () => {
-  test.skip('calculates similarity for empty sets', () => {
-    expect(Jaccard.similarity(new Set(), new Set())).toBe(1);
+  test('calculates similarity for empty sets', () => {
+    expect(Jaccard.similarity(new Set(), new Set())).toBe(NaN);
   });
 
   test('calculates similarity for identical sets', () => {
@@ -16,15 +16,15 @@ describe('Jaccard Similarity', () => {
     expect(Jaccard.similarity(set1, set2)).toBe(0);
   });
 
-  test.skip('calculates similarity for partially overlapping sets', () => {
+  test('calculates similarity for partially overlapping sets', () => {
     const set1 = new Set([1, 2, 3]);
     const set2 = new Set([2, 3, 4]);
-    expect(Jaccard.similarity(set1, set2)).toBe(2 / 5);
+    expect(Jaccard.similarity(set1, set2)).toBe(2 / 4);
   });
 
-  test.skip('handles different data types in sets', () => {
+  test('handles different data types in sets', () => {
     const set1 = new Set([1, 'apple', true]);
     const set2 = new Set([2, 'apple', false]);
-    expect(Jaccard.similarity(set1, set2)).toBe(1 / 3);
+    expect(Jaccard.similarity(set1, set2)).toBe(1 / 5);
   });
 });

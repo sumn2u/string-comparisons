@@ -7,16 +7,16 @@ describe('Damerau-Levenshtein Distance', () => {
     expect(DamerauLevenshtein.similarity(strA, strB)).toBe(1);
   });
 
-  it.skip('calculates distance for single insertion', () => {
+  it('calculates distance for single insertion', () => {
     const strA = 'hit';
     const strB = 'miss';
-    expect(DamerauLevenshtein.distance(strA, strB)).toBe(1);
+    expect(DamerauLevenshtein.distance(strA, strB)).toBe(3);
   });
 
-  it.skip('calculates distance for single deletion', () => {
+  it('calculates distance for single deletion', () => {
     const strA = 'sitting';
     const strB = 'sting';
-    expect(DamerauLevenshtein.distance(strA, strB)).toBe(1);
+    expect(DamerauLevenshtein.distance(strA, strB)).toBe(2);
   });
 
   it('calculates distance for single substitution', () => {
