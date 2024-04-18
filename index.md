@@ -104,7 +104,7 @@ console.log('Trigram Jaccard similarity:', Trigram.similarity(trigram1, trigram2
 
 
 ## Resources
-- [String Similarity Comparision in JS with Examples](https://sumn2u.medium.com/string-similarity-comparision-in-js-with-examples-4bae35f13968)
+- [String Similarity Comparison in JS with Examples](https://sumn2u.medium.com/string-similarity-comparision-in-js-with-examples-4bae35f13968)
 - [Cosine similarity between two sentences](https://sumn2u.medium.com/cosine-similarity-between-two-sentences-8f6630b0ebb7)
 - [The complete guide to string similarity algorithms](https://yassineelkhal.medium.com/the-complete-guide-to-string-similarity-algorithms-1290ad07c6b7)
 - [N-Gram Similarity and Distance](https://webdocs.cs.ualberta.ca/~kondrak/papers/spire05.pdf)
