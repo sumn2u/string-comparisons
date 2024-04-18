@@ -1,6 +1,6 @@
 {
   "name": "string-comparisons",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "A collection of string comparisons algorithms",
   "main": "dist/main.min.js",
   "keywords": [
@@ -19,7 +19,9 @@
     "hamming-distance",
     "string-comparison",
     "sorensen-dice-distance",
-    "n-gram"
+    "n-gram",
+    "q-gram",
+    "optimal-string-alignment"
   ],
   "scripts": {
     "test": "jest",
