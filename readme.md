@@ -120,7 +120,8 @@ If you have any questions or feedback, please don't hesitate to contact us at su
 This project is licensed under the  [MIT](./LICENSE) , which means that you are free to use, modify, and distribute the code as long as you comply with the terms of the license.
 
 ## Resources
-- [String Similarity Comparision in JS with Examples](https://sumn2u.medium.com/string-similarity-comparision-in-js-with-examples-4bae35f13968)
+- [String Similarity Comparison in JS with Examples](https://sumn2u.medium.com/string-similarity-comparision-in-js-with-examples-4bae35f13968)
+- [Cosine similarity between two sentences](https://sumn2u.medium.com/cosine-similarity-between-two-sentences-8f6630b0ebb7)
 - [The complete guide to string similarity algorithms](https://yassineelkhal.medium.com/the-complete-guide-to-string-similarity-algorithms-1290ad07c6b7)
 - [N-Gram Similarity and Distance](https://webdocs.cs.ualberta.ca/~kondrak/papers/spire05.pdf)
 - [Approximate string-matching with q-grams and maximal matches](https://www.sciencedirect.com/science/article/pii/0304397592901434)
